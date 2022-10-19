@@ -47,16 +47,14 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          {posts.map(post => {
-            return (
-            <Post 
-              author={post.author}
-              content={post.content}
-              publishedAt={post.publishedAt}
-
-            />
-          )
-          })}
+          <Post
+            author="Victor Donizete"
+            content="Texto generico criado apenas para simular uma postagem"
+          />
+          <Post
+            author="Fernanda Medeiros"
+            content="Texto generico criado apenas para simular uma postagem"
+          />
         </main>
       </div>
     </div>

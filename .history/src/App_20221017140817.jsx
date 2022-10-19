@@ -19,7 +19,7 @@ const posts = [
       {type: 'paragraph', content: 'of Orbis, powerful new tools, and more! ☀️'},
       {type: 'link', content: 'https://hytale.com/news/2022/7/summer-2022-development-update'},
     ],
-    publishedAt: new Date('2022-10-15 20:00:00'),
+    publishedAt: new Date('2022-05-03 20:00:00'),
   },
 
   {
@@ -35,7 +35,7 @@ const posts = [
       {type: 'paragraph', content: 'of Orbis, powerful new tools, and more! ☀️'},
       {type: 'link', content: 'https://hytale.com/news/2022/7/summer-2022-development-update'},
     ],
-    publishedAt: new Date('2022-10-17 20:00:00'),
+    publishedAt: new Date('2022-05-09 20:00:00'),
   }
 ]
 
@@ -47,16 +47,14 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          {posts.map(post => {
-            return (
-            <Post 
-              author={post.author}
-              content={post.content}
-              publishedAt={post.publishedAt}
-
-            />
-          )
-          })}
+          <Post
+            author="Victor Donizete"
+            content="Texto generico criado apenas para simular uma postagem"
+          />
+          <Post
+            author="Fernanda Medeiros"
+            content="Texto generico criado apenas para simular uma postagem"
+          />
         </main>
       </div>
     </div>

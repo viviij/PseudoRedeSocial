@@ -4,6 +4,19 @@ import { Post } from "./components/Post"
 
 import styles from "./App.module.css"
 import "./global.css"
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/viviij.png',
+      name: 'Victor Donizete',
+      role: 'Vagabundo'
+    }
+    // content: ;
+  }
+]
+
 export function App() {
   return (
     <div>

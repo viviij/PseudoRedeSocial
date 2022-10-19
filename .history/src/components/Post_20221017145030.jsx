@@ -1,11 +1,12 @@
-import { format } from 'date-fns'
-
 import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 
 export function Post(props) {
-  const publishedDateFormatted = format(props.author.publishedAt)
+  const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+  })
   return (
     <article className={styles.post}>
       <header>
