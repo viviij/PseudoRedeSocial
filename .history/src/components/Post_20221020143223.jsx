@@ -5,7 +5,7 @@ import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./Post.module.css"
 
-export function Post({ author, publishedAt, content }) {
+export function Post({ author, publishedAt }) {
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR,
@@ -15,12 +15,6 @@ export function Post({ author, publishedAt, content }) {
     locale: ptBR,
     addSuffix: true,
   })
-
-  function createNewComment (){
-    event.preventDefault()
-    console.log('oi')
-
-  }
   return (
     <article className={styles.post}>
       <header>
@@ -34,17 +28,7 @@ export function Post({ author, publishedAt, content }) {
         <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>{publishedDateRelativeToNow}</time>
       </header>
 
-      <div className={styles.content}>
-        {content.map(line => {
-          if (line.type == 'paragraph') {
-            return <p>{line.content}</p>;
-          } else if (line.type == 'link' ) {
-            return <p><a href="#">{line.content}</a></p>
-          }
-        })}
-      </div>
-
-      <form onSubmit={createNewComment} className={styles.commentForm}>
+      <form className={styles.commentForm}>
         <strong>Deixe seu comentario: </strong>
 
         <textarea

@@ -17,9 +17,7 @@ export function Post({ author, publishedAt, content }) {
   })
 
   function createNewComment (){
-    event.preventDefault()
     console.log('oi')
-
   }
   return (
     <article className={styles.post}>

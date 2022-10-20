@@ -15,12 +15,6 @@ export function Post({ author, publishedAt, content }) {
     locale: ptBR,
     addSuffix: true,
   })
-
-  function createNewComment (){
-    event.preventDefault()
-    console.log('oi')
-
-  }
   return (
     <article className={styles.post}>
       <header>
@@ -44,7 +38,7 @@ export function Post({ author, publishedAt, content }) {
         })}
       </div>
 
-      <form onSubmit={createNewComment} className={styles.commentForm}>
+      <form className={styles.commentForm}>
         <strong>Deixe seu comentario: </strong>
 
         <textarea
