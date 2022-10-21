@@ -34,12 +34,8 @@ export function Post({ author, publishedAt, content }) {
     setNewCommentText(event.target.value)
   }
 
-  function deleteComment(commentToDelete) {
-    const newCommentList = comments.filter(comment =>{
-      return comment != commentToDelete
-    })
-
-    setComments(newCommentList)
+  function deleteComment(comment) {
+    console.log(`Deletar comentário ${comment}`)
   }
   return (
     <article className={styles.post}>

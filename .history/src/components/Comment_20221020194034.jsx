@@ -3,7 +3,7 @@ import { Avatar } from "./Avatar"
 import styles from "./Comment.module.css"
 
 export function Comment({ content, deleteComment }) {
-  function deleteCommentFunc() {
+  function deleteCommentFunc(content) {
     deleteComment(content)
   }
 
