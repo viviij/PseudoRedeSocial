@@ -38,9 +38,9 @@ export function Comment({ content, deleteComment }) {
         </div>
 
         <footer>
-          <button onClick={likeComment}>
+          <button>
             <ThumbsUp />
-            Aplaudir <span>{likeCount}</span>
+            Aplaudir <span>{likeComment}</span>
           </button>
         </footer>
       </div>
